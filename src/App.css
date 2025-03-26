@@ -1,7 +1,10 @@
-.App{
+body{
+    overflow-x: hidden;
     background-color: black;
+    
+}
+.App{
     width: 100vw;
-    height: 100vh;
     display:flex;
     flex-direction: column;
     color: aliceblue;
@@ -10,7 +13,7 @@
 
 .filterCity{
     width:60vw;
-    margin: 1em auto;
+    margin: 1em auto 0 auto;
     display: block;
     padding:6px 1em 6px 1em;
     background-color: #3f39b7;
@@ -28,8 +31,9 @@ input::placeholder {
     display:flex;
     flex-direction: column;
     align-items: center;
-    
+    margin-right: 2em;
 }
+
 
 .divHourForcast{
     display:flex;
@@ -37,21 +41,54 @@ input::placeholder {
     justify-content: center;
     gap: 4em;
     overflow-x: auto;
+    scrollbar-width: none;
     white-space: nowrap;
     background-color: #3f39b7;
-    margin: 0 2em ;
     border-radius: 9px;
-    scrollbar-width: none;
    
 }
+
 .divDailyForcas{
     display:flex;
     flex-direction: column;
     align-items: center;
     gap:1em;
-    width: fit-content; 
-    background-color: #3f39b7;
-    padding: 10px;
-    margin: 1em ;
+    flex: 1;  
+      background-color: #3f39b7;
+    padding-right: 40px;
+    padding-left: 40px;
     border-radius: 9px;
+    margin: 1em 3em 0 3em;
+    height: 90%;
+    min-height: 90%;
+    overflow-y: auto;
+    scrollbar-width: none;
+   
+}
+
+.div_Curr_daily{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height:400px;
+    margin-bottom:1em ;
+    width: 100%;
+}
+.div_current{
+    margin:3em;
+    background-color: #3f39b7;
+    flex: 2;
+    height: 90%;
+    margin: 1em 3em 0 3em;
+    border-radius: 10px;
+}
+
+
+
+/* When screen is small, stack them vertically */
+@media (max-width: 600px) {
+    .div_Curr_daily {
+      flex-direction: column; /* Change to vertical */
+    }
 }

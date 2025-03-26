@@ -1,3 +1,10 @@
+# Weather Application
+features: 
+Current Weather.
+Hourly Forecast:24h forcast.
+Daily Forecast: Provide a 5-day forecast.
+Search by City: Allow users to search for weather in any location.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
