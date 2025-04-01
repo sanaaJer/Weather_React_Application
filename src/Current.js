@@ -3,6 +3,16 @@ import { apiKey } from './App';
 import { CityContext } from './CityContext';
 
 export default function Current() {
+
+  // inline styles
+  const currData_style={flex:1,display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',borderRight:'2px solid white'}
+  const sec_currData_style={flex:1,display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',gap:0}
+  const rowFex_style={flex:1,display:'flex',flexDirection:'row',paddingBottom:'1.5em'}
+  const colFlex_style={flex:1,display:'flex',flexDirection:'column'}
+  const div_curr_col={flex:1,display:'flex',flexDirection:'column',alignItems:'center'}
+ const div_container_curr={display:'flex',flexDirection:'column'}
+ const margin_style={margin:0};
+
   const [currWeath,setCurrWeath] = useState({
     temp:'',
     description:'',
@@ -43,38 +53,37 @@ const iconUrl=`http://openweathermap.org/img/wn/${currWeath.iconCode}@2x.png`;
 
   return (
     <div className='div_current'>
-
-      <div style={{display:'flex',flexDirection:'column'}}>
+      <div style={div_container_curr}>
         {/* current temperature  */}
-        <div style={{flex:1,display:'flex',flexDirection:'column',alignItems:'center'}}>
+        <div style={div_curr_col}>
            <h3>{city}</h3>
-           <img  src={iconUrl} style={{width:'8em',height:'6.5em'}}/>
+           <img  src={iconUrl} className='img_curr'/>
             <h4>{currWeath.temp} °C</h4>
         </div>
-        <div  style={{flex:1,display:'flex',flexDirection:'column'}}>
-            <div style={{flex:1,display:'flex',flexDirection:'row',paddingBottom:'1.5em'}}>
+        <div  style={colFlex_style}>
+            <div style={rowFex_style}>
                    {/* current humidity */}
-                    <div style={{flex:1,display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',borderRight:'2px solid white'}}>
-                        <p style={{margin:0}}>Humidity</p>
-                        <h4 style={{margin:0}}>{currWeath.humidity}</h4>
+                    <div style={currData_style}>
+                        <p style={margin_style}>Humidity</p>
+                        <h4 style={margin_style}>{currWeath.humidity}</h4>
                     </div>
                     {/* current wind speedy */}
-                    <div style={{flex:1,display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',gap:0}}>
-                        <p style={{margin:0}}>Wind speed</p>
-                        <h4 style={{margin:0}}>{currWeath.windSpeed}</h4>
+                    <div style={sec_currData_style}>
+                        <p style={margin_style}>Wind speed</p>
+                        <h4 style={margin_style}>{currWeath.windSpeed}</h4>
                     </div>
             </div>
 
-            <div style={{flex:1,display:'flex',flexDirection:'row'}}>
+            <div style={rowFex_style}>
                   {/* current pressure */}
-                   <div style={{flex:1,display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',borderRight:'2px solid white'}}>
-                        <p style={{margin:0}}>Pressure</p>
-                        <h4 style={{margin:0}}>{currWeath.pressure}</h4>
+                   <div style={currData_style}>
+                        <p style={margin_style}>Pressure</p>
+                        <h4 style={margin_style}>{currWeath.pressure}</h4>
                     </div>
                     {/* current visibility */}
-                    <div style={{flex:1,display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',gap:0}}>
-                        <p style={{margin:0}}>Visibility</p>
-                        <h4 style={{margin:0}}>{currWeath.visibility}</h4>
+                    <div style={sec_currData_style}>
+                        <p style={margin_style}>Visibility</p>
+                        <h4 style={margin_style}>{currWeath.visibility}</h4>
                     </div>
             </div>
 

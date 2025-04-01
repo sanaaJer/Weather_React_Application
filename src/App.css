@@ -84,6 +84,12 @@ input::placeholder {
     border-radius: 10px;
 }
 
+.img_curr{
+width:8em;
+height:7em;
+margin:0
+}
+
 
 
 /* When screen is small, stack them vertically */
