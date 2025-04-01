@@ -6,7 +6,7 @@ export const CityContext=createContext();
 // creation of reducer 
 const Reducer=(state,action)=>{
      switch(action.type){
-        case 'FILTERCITY': return action.payload;// filter city when user enter a city name iin filter input 
+        case 'FILTERCITY': return {city:action.payload};// action triggers when user enter a city name in filter input 
         default: return state;
      }
 }
