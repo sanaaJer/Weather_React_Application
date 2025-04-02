@@ -9,35 +9,17 @@ import { WeatherProvider } from './CityContext';
 
 export const apiKey = '61332d689b264e125087e027aafd0c55'; //  API key for (OpenWeather API)
 
+
+// App component that will wrap all my app components
 function App() {
 
-
-
-// const city = 'London';
-// const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-// const [weatherData, setWeatherData] = useState(null);
-
-
-//inline style
-const h4_style={margin:' 1em 1.5em'};
-const div_HourForc={backgroundColor:'#3f39b7',   margin: '0 2em 1em 2em',borderRadius: '9px'};
-
-
-
-// useEffect(() => {
-//   fetch(url)
-//     .then(response => response.json())
-//     .then(data => {
-//       setWeatherData(data)
-//       alert(JSON.stringify(data, null, 2)); 
-//     })
-//     .catch(error => console.error(error));
-// }, []);  
-
+  //inline style
+  const h4_style={margin:' 1em 1.5em'};
+  const div_HourForc={backgroundColor:'#3f39b7',   margin: '0 2em 1em 2em',borderRadius: '9px'};
 
   return (
     <div className="App">
-    {/* wrap components inside my provider */}
+    {/* wrap components inside my context provider */}
     <WeatherProvider>
       {/* filter compoenent */}
       <Filter/>

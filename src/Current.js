@@ -10,9 +10,10 @@ export default function Current() {
   const rowFex_style={flex:1,display:'flex',flexDirection:'row',paddingBottom:'1.5em'}
   const colFlex_style={flex:1,display:'flex',flexDirection:'column'}
   const div_curr_col={flex:1,display:'flex',flexDirection:'column',alignItems:'center'}
- const div_container_curr={display:'flex',flexDirection:'column'}
- const margin_style={margin:0};
+  const div_container_curr={display:'flex',flexDirection:'column'}
+  const margin_style={margin:0};
 
+//  state variable current weather object
   const [currWeath,setCurrWeath] = useState({
     temp:'',
     description:'',
@@ -23,10 +24,12 @@ export default function Current() {
     visibility:''
 });
 
-
+// get global state city
 const {state}=useContext(CityContext);
 const city = state.city;
+// current weather api url
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
 
 //  handle fetch current weather information from API
 useEffect(() => {
@@ -49,6 +52,7 @@ fetch(url)
 .catch((err) => console.error('Fetch error:', err));
 }, [city]);
 
+// icon weather url
 const iconUrl=`http://openweathermap.org/img/wn/${currWeath.iconCode}@2x.png`;
 
   return (
