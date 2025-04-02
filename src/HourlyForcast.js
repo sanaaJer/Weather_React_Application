@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import HourlyCard from './HourlyCard'
+import { apiKey } from './App';
+import { CityContext } from './CityContext';
 
 export default function HourlyForcast() {
-  const tab=new Array(24).fill(0);
+  // get city context
+  const { state } = useContext(CityContext);
+  const city = state.city;
+
+
+  const  [hourForecast,setHourforecast]=useState([])
+  const url= `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+
+  useEffect(()=>{
+    fetch(url).then((res) => res.json())
+    .then((data)=>{
+      setHourforecast(data.list.slice(0, 24))
+    }
+
+    )
+  },[city])
   return (
        <div className='divHourForcast'>
-        {tab.map((_)=>
-           <HourlyCard />
+        {hourForecast.map((hour)=>
+           <HourlyCard  hour={hour}/>
         )}
        </div>
     
