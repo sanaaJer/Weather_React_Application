@@ -61,7 +61,7 @@ const iconUrl=`http://openweathermap.org/img/wn/${currWeath.iconCode}@2x.png`;
         {/* current temperature  */}
         <div style={div_curr_col}>
            <h3>{city}</h3>
-           <img  src={iconUrl} className='img_curr'/>
+           <img  src={iconUrl} className='img_curr' alt='current weather icon'/>
             <h4>{currWeath.temp} °C</h4>
         </div>
         <div  style={colFlex_style}>

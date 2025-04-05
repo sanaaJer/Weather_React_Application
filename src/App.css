@@ -11,17 +11,8 @@ body{
 
 }
 
-.filterCity{
-    width:60vw;
-    margin: 1em auto 0 auto;
-    display: block;
-    padding:6px 1em 6px 1em;
-    background-color: #3f39b7;
-    border: none;
-    border-radius: 10px;
-}
 input::placeholder {
-    color: rgb(239, 234, 234); /* Change to your preferred color */
+    color:rgb(222, 217, 217);
     opacity: 1;  /* Ensure full opacity (some browsers reduce opacity by default) */
 }
 
@@ -54,7 +45,7 @@ input::placeholder {
     align-items: center;
     gap:1em;
     flex: 1;  
-      background-color: #3f39b7;
+    background-color: #3f39b7;
     padding-right: 40px;
     padding-left: 40px;
     border-radius: 9px;
@@ -63,7 +54,6 @@ input::placeholder {
     min-height: 90%;
     overflow-y: auto;
     scrollbar-width: none;
-   
 }
 
 .div_Curr_daily{
@@ -71,16 +61,17 @@ input::placeholder {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height:400px;
+ 
     margin-bottom:1em ;
     width: 100%;
+    min-height: auto;
 }
 .div_current{
     margin:3em;
     background-color: #3f39b7;
     flex: 2;
-    height: 90%;
     margin: 1em 3em 0 3em;
+    height: 90%;
     border-radius: 10px;
 }
 
@@ -92,9 +83,48 @@ margin:0
 
 
 
+.filterCity:hover{
+    color:white;
+}
+
+.div_curr_day_h {
+    display: flex;
+    flex-direction: column;
+    gap: 2em; /* ✅ Add vertical space between .div_Curr_daily and .divHourForcast */
+  }
+
 /* When screen is small, stack them vertically */
 @media (max-width: 600px) {
     .div_Curr_daily {
       flex-direction: column; /* Change to vertical */
+     
     }
+
+    .div_curr_day_h{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .div_current{
+        width: 70%;
+    }
+    
+    .divHourForcast{
+        width: 90%;
+    }
+   
+}
+
+
+
+
+.filterCity{
+    width:60vw;
+    margin: 1em auto 0 auto;
+    display: block;
+    padding:6px 1em 6px 1em;
+    background-color: #3f39b7;
+    border: none;
+    border-radius: 10px;
+   color: white;
 }

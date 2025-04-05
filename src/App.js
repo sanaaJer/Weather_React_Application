@@ -5,7 +5,7 @@ import DailyForcast from './DailyForcast';
 import Filter from './Filter';
 import HourlyForcast from './HourlyForcast';
 import { WeatherProvider } from './CityContext';
-
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const apiKey = '61332d689b264e125087e027aafd0c55'; //  API key for (OpenWeather API)
 
@@ -23,6 +23,8 @@ function App() {
     <WeatherProvider>
       {/* filter compoenent */}
       <Filter/>
+
+      <div className='div_curr_day_h'>
       {/* current and daily weather section components*/}
       <div className='div_Curr_daily'>
         {/* current weather component */}
@@ -30,10 +32,13 @@ function App() {
         {/* 5 days forcast */}
         <DailyForcast />
       </div>
+
       <div style={div_HourForc} >
           <h4 style={h4_style}>24-hours forcast</h4>
           {/* 24-hour forecast component */}
           <HourlyForcast />
+      </div>
+
       </div>
     </WeatherProvider>
      

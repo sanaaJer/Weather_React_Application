@@ -15,9 +15,10 @@ export default function Filter() {
 
 
     return (
-    <div>
+        <div>
+          
           <input placeholder='search for cities' className='filterCity' value={city}  onKeyDown={handleKeyDown}/>
-    </div>
+       </div>
   
   )
 }
