@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CityContext } from './CityContext'
+import { CityContext } from '../Context/CityContext'
 
 export default function Filter() {
     // get state from context

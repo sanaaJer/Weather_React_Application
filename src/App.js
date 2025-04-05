@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Current from './Current';
-import DailyForcast from './DailyForcast';
-import Filter from './Filter';
-import HourlyForcast from './HourlyForcast';
-import { WeatherProvider } from './CityContext';
+import Current from './Components/Current';
+import DailyForcast from './Components/DailyForcast';
+import Filter from './Components/Filter';
+import HourlyForcast from './Components/HourlyForcast';
+import { WeatherProvider } from './Context/CityContext';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const apiKey = '61332d689b264e125087e027aafd0c55'; //  API key for (OpenWeather API)

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import HourlyCard from './HourlyCard'
-import { apiKey } from './App';
-import { CityContext } from './CityContext';
+import { apiKey } from '../App';
+import { CityContext } from '../Context/CityContext';
 
 export default function HourlyForcast() {
   // get city context
