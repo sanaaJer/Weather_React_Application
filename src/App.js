@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+import './styles/App.css';
 import Current from './Components/Current';
 import DailyForcast from './Components/DailyForcast';
 import Filter from './Components/Filter';
