@@ -97,7 +97,8 @@ margin:0
 /* When screen is small, stack them vertically */
 @media (max-width: 600px) {
     .div_Curr_daily {
-      flex-direction: column; /* Change to vertical */
+        /* Change to vertical */
+      flex-direction: column; 
      
     }
 
