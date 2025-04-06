@@ -90,7 +90,8 @@ margin:0
 .div_curr_day_h {
     display: flex;
     flex-direction: column;
-    gap: 2em; /* ✅ Add vertical space between .div_Curr_daily and .divHourForcast */
+    /* Add vertical space between .div_Curr_daily and .divHourForcast */
+    gap: 2em; 
   }
 
 /* When screen is small, stack them vertically */
