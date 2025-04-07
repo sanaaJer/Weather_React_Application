@@ -23,7 +23,7 @@ export default function DailyForcast() {
 
 useEffect( ()=>{
   
-  fetch(url)
+fetch(url)
 .then((res) => res.json())
 .then((data) => {
   const forecast=data.list.filter((item, index, arr) => {

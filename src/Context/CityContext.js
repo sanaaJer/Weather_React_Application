@@ -13,7 +13,7 @@ const Reducer=(state,action)=>{
 
 // init value state 
 const initState={
-    city:'Casablanca'
+    city:'Casablanca',isLoading:false
 }
 
 // provider creation

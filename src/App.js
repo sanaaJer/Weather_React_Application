@@ -23,7 +23,6 @@ function App() {
     <WeatherProvider>
       {/* filter compoenent */}
       <Filter/>
-
       <div className='div_curr_day_h'>
       {/* current and daily weather section components*/}
       <div className='div_Curr_daily'>
