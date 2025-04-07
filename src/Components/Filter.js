@@ -4,6 +4,7 @@ import { CityContext } from '../Context/CityContext'
 export default function Filter() {
     // get state from context
     const {city,dispatch}=useContext(CityContext);
+   
      
     // handle event :click enter
     const handleKeyDown=(e)=>{

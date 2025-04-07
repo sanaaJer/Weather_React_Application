@@ -15,9 +15,14 @@ export default function DailyForcast() {
   const [forecast, setForecast] = useState([]);
 
 
+   // isLoading data state to set if loading state is active
+   const [isLoading,setIsLoading]=useState(false);
+
+
 
 
 useEffect( ()=>{
+  
   fetch(url)
 .then((res) => res.json())
 .then((data) => {
