@@ -22,14 +22,16 @@ function App() {
 useEffect(()=>{
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
-      (position) => {const lat = position.coords.latitude;
+      (position) => {
+        const lat = position.coords.latitude;
         const lon = position.coords.longitude;
+        setLoadAnim(false); // Stop loading when location is retrieved
+
       },
       (error) => {
-        loader.style.display = "none";    // Hide animation on error
-        locationText.textContent = "Error getting location.";
-      }
-    );}
+        setLoadAnim(false)  // Hide animation on error
+      });
+    }
 },[]);
 
 
@@ -37,21 +39,12 @@ useEffect(()=>{
     <div className="App">
     {/* wrap components inside my context provider */}
     <WeatherProvider>
-    loadAnim && {
-      <LoadingAnimation />
-      {
-
-
-
-    }
-    !loadAnim && {
-
-
-
-
-    }
-      {/* filter compoenent */}
-      <Filter/>
+   { loadAnim ? (
+      <LoadingAnimation />):
+    (
+      <>
+     {/* filter compoenent */}
+      <Filter />
       <div className='div_curr_day_h'>
           {/* current and daily weather section components*/}
           <div className='div_Curr_daily'>
@@ -65,7 +58,12 @@ useEffect(()=>{
               {/* 24-hour forecast component */}
               <HourlyForcast />
           </div>
-      </div>
+      </div> 
+      </>
+      )
+     }
+
+   
     </WeatherProvider>
      
     
