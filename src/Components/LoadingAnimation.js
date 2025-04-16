@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function LoadingAnimation() {
   return (
-    <div>LoadingAnimation</div>
+    <div className='anim_contai'>
+        <div className='anim_box'></div>
+    </div>
   )
 }
