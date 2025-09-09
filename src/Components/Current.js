@@ -28,7 +28,7 @@ export default function Current() {
 const {state}=useContext(CityContext);
 const city = state.city;
 // current weather api url
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+//const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 
 //  handle fetch current weather information from API
