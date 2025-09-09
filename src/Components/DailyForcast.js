@@ -9,7 +9,7 @@ export default function DailyForcast() {
   const {state}=useContext(CityContext);
   const city = state.city;
   // forecast url 
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+//  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   
  // forecast state variable
   const [forecast, setForecast] = useState([]);
@@ -22,7 +22,8 @@ export default function DailyForcast() {
 
 
 useEffect( ()=>{
-  
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
 fetch(url)
 .then((res) => res.json())
 .then((data) => {
