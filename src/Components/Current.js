@@ -34,6 +34,8 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${a
 //  handle fetch current weather information from API
 useEffect(() => {
 if (!city) return; // Ensure city exists
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
 fetch(url)
 .then((res) => res.json())
 .then((data) => {
