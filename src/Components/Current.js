@@ -50,7 +50,7 @@ fetch(url)
  });
 })
 .catch((err) => console.error('Fetch error:', err));
-}, [city]);
+}, [url]);
 
 // icon weather url
 const iconUrl=`http://openweathermap.org/img/wn/${currWeath.iconCode}@2x.png`;
