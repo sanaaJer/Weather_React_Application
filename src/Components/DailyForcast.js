@@ -16,7 +16,7 @@ export default function DailyForcast() {
 
 
    // isLoading data state to set if loading state is active
-   const [isLoading,setIsLoading]=useState(false);
+   //const [isLoading,setIsLoading]=useState(false);
 
 
 
