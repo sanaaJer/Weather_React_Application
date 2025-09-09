@@ -23,8 +23,7 @@ useEffect(()=>{
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
+       
         setLoadAnim(false); // Stop loading when location is retrieved
 
       },
