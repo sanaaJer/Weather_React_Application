@@ -16,7 +16,7 @@ export default function HourlyCard({hour}) {
   return (
     <div className='HourCard'>
         <p>{time} </p>
-        <img  src={iconUrl} style={{width:'2.5em',height:'2.5em'}}/>
+        <img  alt="Weather icon" src={iconUrl} style={{width:'2.5em',height:'2.5em'}}/>
         <h4>{temperature}°</h4>
     </div>
   )
