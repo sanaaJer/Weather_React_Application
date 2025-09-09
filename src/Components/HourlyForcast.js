@@ -10,9 +10,11 @@ export default function HourlyForcast() {
 
 
   const  [hourForecast,setHourforecast]=useState([])
-  const url= `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  //const url= `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
   useEffect(()=>{
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
     fetch(url).then((res) => res.json())
     .then((data)=>{
       setHourforecast(data.list.slice(0, 24))
